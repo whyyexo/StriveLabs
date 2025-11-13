@@ -182,11 +182,11 @@ const Contact: React.FC = () => {
                 description: 'Get help with your account or technical issues',
                 link: '/support',
               },
-              {
-                title: 'Sales',
-                description: 'Interested in enterprise plans? Let's talk.',
-                link: '/contact',
-              },
+                {
+                  title: 'Sales',
+                  description: "Interested in enterprise plans? Let's talk.",
+                  link: '/contact',
+                },
               {
                 title: 'Community',
                 description: 'Join our Discord community and connect with others',

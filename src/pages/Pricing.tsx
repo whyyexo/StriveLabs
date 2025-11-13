@@ -162,7 +162,7 @@ const Pricing: React.FC = () => {
                 {
                   question: 'What happens if I exceed my limits?',
                   answer:
-                    'We'll notify you before you hit your limits. You can upgrade your plan at any time.',
+                    "We'll notify you before you hit your limits. You can upgrade your plan at any time.",
                 },
               ].map((faq, index) => (
                 <motion.div
