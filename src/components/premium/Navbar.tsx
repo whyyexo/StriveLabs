@@ -104,9 +104,9 @@ const Navbar: React.FC = () => {
               onClick={() => navigate('/')}
             >
               <div className="flex items-center space-x-2">
-                <div className="w-8 h-8 bg-gradient-to-br from-primary to-primary-600 rounded-lg flex items-center justify-center">
+                <div className="w-8 h-8 bg-white rounded-lg flex items-center justify-center">
                   <svg
-                    className="w-5 h-5 text-white"
+                    className="w-5 h-5 text-background"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -183,7 +183,7 @@ const Navbar: React.FC = () => {
                               onClick={() => handleNavClick(child.href)}
                               className={`w-full text-left px-4 py-2 text-sm transition-colors duration-200 ${
                                 isActive(child.href)
-                                  ? 'text-primary bg-primary/10'
+                                  ? 'text-primary bg-white/10'
                                   : 'text-neutral-400 hover:text-white hover:bg-neutral-800'
                               }`}
                             >
@@ -230,7 +230,7 @@ const Navbar: React.FC = () => {
                     whileHover={{ scale: 0.985 }}
                     whileTap={{ scale: 0.97 }}
                     onClick={() => navigate('/dashboard/sign-in')}
-                    className="px-4 py-2 bg-primary text-white text-sm font-medium rounded-lg hover:bg-primary-600 transition-all duration-200 shadow-lg shadow-primary/20"
+                    className="px-4 py-2 bg-primary text-background text-sm font-medium rounded-lg hover:bg-primary-100 transition-all duration-200 shadow-lg shadow-white/20"
                   >
                     Get started
                   </motion.button>
@@ -358,7 +358,7 @@ const Navbar: React.FC = () => {
                       </button>
                       <button
                         onClick={() => handleNavClick('/dashboard/sign-in')}
-                        className="w-full px-4 py-2 bg-primary text-white text-sm font-medium rounded-lg hover:bg-primary-600 transition-all duration-200"
+                        className="w-full px-4 py-2 bg-primary text-background text-sm font-medium rounded-lg hover:bg-primary-100 transition-all duration-200"
                       >
                         Get started
                       </button>

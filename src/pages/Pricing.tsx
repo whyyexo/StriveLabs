@@ -98,7 +98,7 @@ const Pricing: React.FC = () => {
               <span className={`text-sm ${isAnnual ? 'text-white' : 'text-muted'}`}>
                 Annual
                 {isAnnual && (
-                  <span className="ml-2 px-2 py-0.5 bg-primary/20 text-primary text-xs rounded">
+                  <span className="ml-2 px-2 py-0.5 bg-white/20 text-primary text-xs rounded">
                     Save 20%
                   </span>
                 )}
@@ -202,7 +202,7 @@ const Pricing: React.FC = () => {
               whileHover={{ scale: 0.985 }}
               whileTap={{ scale: 0.97 }}
               onClick={() => navigate('/contact')}
-              className="px-8 py-4 bg-primary text-white text-base font-semibold rounded-lg hover:bg-primary-600 transition-all duration-200 shadow-lg shadow-primary/20"
+              className="px-8 py-4 bg-primary text-background text-base font-semibold rounded-lg hover:bg-primary-100 transition-all duration-200 shadow-lg shadow-white/20"
             >
               Contact Sales
             </motion.button>

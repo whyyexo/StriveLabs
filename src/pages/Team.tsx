@@ -63,7 +63,7 @@ const Team: React.FC = () => {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-surface border border-neutral-800 rounded-xl p-6 hover:border-neutral-700 transition-all duration-200"
               >
-                <div className="w-24 h-24 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-full mx-auto mb-4 flex items-center justify-center">
+                <div className="w-24 h-24 bg-white/20 rounded-full mx-auto mb-4 flex items-center justify-center">
                   <span className="text-2xl font-bold text-primary">
                     {member.name.split(' ').map((n) => n[0]).join('')}
                   </span>

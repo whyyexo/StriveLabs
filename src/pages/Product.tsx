@@ -46,7 +46,7 @@ const Product: React.FC = () => {
           >
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white">
               Everything you need to{' '}
-              <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+              <span className="text-primary">
                 build better
               </span>
             </h1>
@@ -58,7 +58,7 @@ const Product: React.FC = () => {
                 whileHover={{ scale: 0.985 }}
                 whileTap={{ scale: 0.97 }}
                 onClick={() => navigate('/dashboard/sign-in')}
-                className="px-8 py-4 bg-primary text-white text-base font-semibold rounded-lg hover:bg-primary-600 transition-all duration-200 shadow-lg shadow-primary/20"
+                className="px-8 py-4 bg-primary text-background text-base font-semibold rounded-lg hover:bg-primary-100 transition-all duration-200 shadow-lg shadow-white/20"
               >
                 Get started
               </motion.button>
@@ -153,7 +153,7 @@ const Product: React.FC = () => {
               whileHover={{ scale: 0.985 }}
               whileTap={{ scale: 0.97 }}
               onClick={() => navigate('/dashboard/sign-in')}
-              className="px-8 py-4 bg-primary text-white text-base font-semibold rounded-lg hover:bg-primary-600 transition-all duration-200 shadow-lg shadow-primary/20"
+              className="px-8 py-4 bg-primary text-background text-base font-semibold rounded-lg hover:bg-primary-100 transition-all duration-200 shadow-lg shadow-white/20"
             >
               Start free trial
             </motion.button>

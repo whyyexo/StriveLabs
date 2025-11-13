@@ -68,9 +68,9 @@ const LoadingScreen: React.FC<LoadingScreenProps> = ({ isLoading, onLoadingCompl
               <motion.div
                 animate={{
                   boxShadow: [
-                    '0 0 20px rgba(139, 92, 246, 0.3)',
-                    '0 0 40px rgba(139, 92, 246, 0.5)',
-                    '0 0 20px rgba(139, 92, 246, 0.3)',
+                    '0 0 20px rgba(255, 255, 255, 0.2)',
+                    '0 0 40px rgba(255, 255, 255, 0.3)',
+                    '0 0 20px rgba(255, 255, 255, 0.2)',
                   ],
                 }}
                 transition={{
@@ -78,13 +78,13 @@ const LoadingScreen: React.FC<LoadingScreenProps> = ({ isLoading, onLoadingCompl
                   repeat: Infinity,
                   ease: 'easeInOut',
                 }}
-                className="absolute inset-0 rounded-full bg-primary/20 blur-xl"
+                className="absolute inset-0 rounded-full bg-white/10 blur-xl"
               />
               
               {/* Brand icon */}
-              <div className="relative w-16 h-16 bg-gradient-to-br from-primary to-primary-600 rounded-xl flex items-center justify-center">
+              <div className="relative w-16 h-16 bg-white rounded-xl flex items-center justify-center">
                 <svg
-                  className="w-8 h-8 text-white"
+                  className="w-8 h-8 text-background"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"

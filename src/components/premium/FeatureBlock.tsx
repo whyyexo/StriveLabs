@@ -48,7 +48,7 @@ const FeatureBlock: React.FC<FeatureBlockProps> = ({
               initial={{ opacity: 0, scale: 0 }}
               animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0 }}
               transition={{ duration: 0.4, delay: index * 0.1 + 0.3 }}
-              className="inline-flex items-center justify-center w-12 h-12 bg-primary/10 rounded-lg text-primary"
+              className="inline-flex items-center justify-center w-12 h-12 bg-white/10 rounded-lg text-primary"
             >
               {icon}
             </motion.div>
@@ -67,12 +67,12 @@ const FeatureBlock: React.FC<FeatureBlockProps> = ({
       >
         {image || (
           <div className="relative w-full aspect-video bg-surface border border-neutral-800 rounded-xl p-8 shadow-xl">
-            <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-secondary/5 rounded-xl" />
+            <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-white/5 rounded-xl" />
             <div className="relative space-y-3">
               <div className="h-3 bg-neutral-800 rounded w-3/4" />
               <div className="h-3 bg-neutral-800 rounded w-full" />
               <div className="h-3 bg-neutral-800 rounded w-5/6" />
-              <div className="h-24 bg-gradient-to-br from-primary/10 to-secondary/10 rounded-lg mt-4" />
+              <div className="h-24 bg-gradient-to-br from-white/10 to-white/10 rounded-lg mt-4" />
             </div>
           </div>
         )}

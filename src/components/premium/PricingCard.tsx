@@ -53,7 +53,7 @@ const PricingCard: React.FC<PricingCardProps> = ({
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.4, delay: index * 0.1 + 0.2 }}
-            className="px-4 py-1 bg-primary text-white text-xs font-semibold rounded-full shadow-lg shadow-primary/30"
+            className="px-4 py-1 bg-primary text-background text-xs font-semibold rounded-full shadow-lg shadow-white/30"
           >
             Most Popular
           </motion.div>
@@ -65,7 +65,7 @@ const PricingCard: React.FC<PricingCardProps> = ({
         transition={{ duration: 0.2 }}
         className={`relative h-full bg-surface border rounded-xl p-8 shadow-lg transition-all duration-200 ${
           popular
-            ? 'border-primary/50 bg-surface shadow-primary/10'
+            ? 'border-white/50 bg-surface shadow-white/10'
             : 'border-neutral-800 hover:border-neutral-700'
         }`}
       >
@@ -136,7 +136,7 @@ const PricingCard: React.FC<PricingCardProps> = ({
           onClick={handleClick}
           className={`w-full py-3 px-6 rounded-lg font-semibold text-sm transition-all duration-200 ${
             popular
-              ? 'bg-primary text-white hover:bg-primary-600 shadow-lg shadow-primary/20'
+              ? 'bg-primary text-background hover:bg-primary-100 shadow-lg shadow-white/20'
               : 'bg-neutral-800 text-white hover:bg-neutral-700 border border-neutral-700'
           }`}
         >

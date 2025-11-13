@@ -70,7 +70,7 @@ const Docs: React.FC = () => {
                 whileHover={{ scale: 0.985 }}
                 whileTap={{ scale: 0.97 }}
                 onClick={() => navigate('/docs/quickstart')}
-                className="px-8 py-4 bg-primary text-white text-base font-semibold rounded-lg hover:bg-primary-600 transition-all duration-200 shadow-lg shadow-primary/20"
+                className="px-8 py-4 bg-primary text-background text-base font-semibold rounded-lg hover:bg-primary-100 transition-all duration-200 shadow-lg shadow-white/20"
               >
                 Quick Start
               </motion.button>
@@ -107,7 +107,7 @@ const Docs: React.FC = () => {
                     <li key={link.label}>
                       <button
                         onClick={() => navigate(link.href)}
-                        className="text-sm text-muted hover:text-primary transition-colors duration-200 text-left"
+                        className="text-sm text-muted hover:text-white transition-colors duration-200 text-left"
                       >
                         {link.label} →
                       </button>
@@ -141,7 +141,7 @@ const Docs: React.FC = () => {
                 whileHover={{ scale: 0.985 }}
                 whileTap={{ scale: 0.97 }}
                 onClick={() => navigate('/contact')}
-                className="px-8 py-4 bg-primary text-white text-base font-semibold rounded-lg hover:bg-primary-600 transition-all duration-200 shadow-lg shadow-primary/20"
+                className="px-8 py-4 bg-primary text-background text-base font-semibold rounded-lg hover:bg-primary-100 transition-all duration-200 shadow-lg shadow-white/20"
               >
                 Contact Support
               </motion.button>

@@ -120,7 +120,7 @@ const About: React.FC = () => {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-background border border-neutral-800 rounded-xl p-8 hover:border-neutral-700 transition-all duration-200"
               >
-                <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center text-primary mb-4">
+                <div className="w-12 h-12 bg-white/10 rounded-lg flex items-center justify-center text-primary mb-4">
                   {value.icon}
                 </div>
                 <h3 className="text-xl font-bold text-white mb-3">{value.title}</h3>
@@ -151,7 +151,7 @@ const About: React.FC = () => {
               whileHover={{ scale: 0.985 }}
               whileTap={{ scale: 0.97 }}
               onClick={() => navigate('/careers')}
-              className="px-8 py-4 bg-primary text-white text-base font-semibold rounded-lg hover:bg-primary-600 transition-all duration-200 shadow-lg shadow-primary/20"
+              className="px-8 py-4 bg-primary text-background text-base font-semibold rounded-lg hover:bg-primary-100 transition-all duration-200 shadow-lg shadow-white/20"
             >
               View Careers
             </motion.button>

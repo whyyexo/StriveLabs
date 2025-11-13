@@ -74,7 +74,7 @@ const Contact: React.FC = () => {
                 animate={{ opacity: 1, scale: 1 }}
                 className="text-center space-y-4"
               >
-                <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto">
+                <div className="w-16 h-16 bg-white/10 rounded-full flex items-center justify-center mx-auto">
                   <svg
                     className="w-8 h-8 text-primary"
                     fill="none"
@@ -162,7 +162,7 @@ const Contact: React.FC = () => {
                   disabled={isSubmitting}
                   whileHover={{ scale: isSubmitting ? 1 : 0.985 }}
                   whileTap={{ scale: isSubmitting ? 1 : 0.97 }}
-                  className="w-full px-8 py-4 bg-primary text-white text-base font-semibold rounded-lg hover:bg-primary-600 transition-all duration-200 shadow-lg shadow-primary/20 disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="w-full px-8 py-4 bg-primary text-background text-base font-semibold rounded-lg hover:bg-primary-100 transition-all duration-200 shadow-lg shadow-white/20 disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   {isSubmitting ? 'Sending...' : 'Send Message'}
                 </motion.button>
@@ -205,7 +205,7 @@ const Contact: React.FC = () => {
                 <p className="text-muted mb-4">{item.description}</p>
                 <button
                   onClick={() => navigate(item.link)}
-                  className="text-primary hover:text-primary-400 transition-colors duration-200 font-medium"
+                  className="text-primary hover:text-white transition-colors duration-200 font-medium"
                 >
                   Learn more →
                 </button>

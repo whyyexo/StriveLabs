@@ -194,7 +194,7 @@ const Home: React.FC = () => {
           >
             <button
               onClick={() => navigate('/pricing')}
-              className="text-primary hover:text-primary-400 transition-colors duration-200 font-medium"
+              className="text-primary hover:text-white transition-colors duration-200 font-medium"
             >
               View full pricing →
             </button>
@@ -223,7 +223,7 @@ const Home: React.FC = () => {
                 whileHover={{ scale: 0.985 }}
                 whileTap={{ scale: 0.97 }}
                 onClick={() => navigate('/dashboard/sign-in')}
-                className="px-8 py-4 bg-primary text-white text-base font-semibold rounded-lg hover:bg-primary-600 transition-all duration-200 shadow-lg shadow-primary/20 hover:shadow-primary/30"
+                className="px-8 py-4 bg-primary text-background text-base font-semibold rounded-lg hover:bg-primary-100 transition-all duration-200 shadow-lg shadow-white/20 hover:shadow-white/30"
               >
                 Start building now
               </motion.button>

@@ -26,7 +26,7 @@ const Hero: React.FC<HeroProps> = ({
       {/* Background effects */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-background via-surface to-background" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(139,92,246,0.1),transparent_50%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(255,255,255,0.05),transparent_50%)]" />
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#0F1115_1px,transparent_1px),linear-gradient(to_bottom,#0F1115_1px,transparent_1px)] bg-[size:4rem_4rem] opacity-20" />
       </div>
 
@@ -54,7 +54,7 @@ const Hero: React.FC<HeroProps> = ({
                   className="inline-block mr-2"
                 >
                   {word === 'Strive' ? (
-                    <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+                    <span className="text-primary">
                       {word}
                     </span>
                   ) : (
@@ -85,7 +85,7 @@ const Hero: React.FC<HeroProps> = ({
                 whileHover={{ scale: 0.985 }}
                 whileTap={{ scale: 0.97 }}
                 onClick={() => navigate(primaryCTA.href)}
-                className="px-8 py-4 bg-primary text-white text-base font-semibold rounded-lg hover:bg-primary-600 transition-all duration-200 shadow-lg shadow-primary/20 hover:shadow-primary/30"
+                className="px-8 py-4 bg-primary text-background text-base font-semibold rounded-lg hover:bg-primary-100 transition-all duration-200 shadow-lg shadow-white/20 hover:shadow-white/30"
               >
                 {primaryCTA.label}
               </motion.button>
@@ -110,13 +110,13 @@ const Hero: React.FC<HeroProps> = ({
             {visual || (
               <div className="relative w-full aspect-square max-w-lg mx-auto">
                 {/* Placeholder visual */}
-                <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-2xl blur-3xl" />
+                <div className="absolute inset-0 bg-gradient-to-br from-white/20 to-white/20 rounded-2xl blur-3xl" />
                 <div className="relative bg-surface border border-neutral-800 rounded-2xl p-8 shadow-2xl">
                   <div className="space-y-4">
                     <div className="h-4 bg-neutral-800 rounded w-3/4" />
                     <div className="h-4 bg-neutral-800 rounded w-full" />
                     <div className="h-4 bg-neutral-800 rounded w-5/6" />
-                    <div className="h-32 bg-gradient-to-br from-primary/10 to-secondary/10 rounded-lg mt-6" />
+                    <div className="h-32 bg-gradient-to-br from-white/10 to-white/10 rounded-lg mt-6" />
                   </div>
                 </div>
               </div>
