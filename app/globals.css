@@ -4,13 +4,14 @@
 
 @layer base {
   * {
-    @apply border-border;
+    border-color: rgba(255, 255, 255, 0.1);
   }
   html {
-    @apply bg-background;
+    background-color: #0A0A0A;
   }
   body {
-    @apply bg-background text-foreground;
+    background-color: #0A0A0A;
+    color: #FFFFFF;
     font-feature-settings: "rlig" 1, "calt" 1;
     margin: 0;
     padding: 0;
