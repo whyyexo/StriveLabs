@@ -16,9 +16,36 @@ const nextConfig = {
   typescript: {
     ignoreBuildErrors: true,
   },
+  // Explicitly tell Next.js to only use app directory, ignore pages directory
+  // In Next.js 15, appDir is default, but we need to prevent scanning src/pages
+  pageExtensions: ['tsx', 'ts', 'jsx', 'js'],
   webpack: (config, { isServer }) => {
     const srcPath = path.resolve(__dirname, 'src')
+    const srcPagesPath = path.resolve(__dirname, 'src', 'pages')
     const emptyModulePath = path.resolve(__dirname, 'lib', 'empty-module.js')
+    
+    // Exclude src/pages from being processed as Next.js pages
+    // This prevents Next.js from trying to compile pages in src/pages
+    config.module = config.module || {}
+    config.module.rules = config.module.rules || []
+    
+    // Add rule to completely exclude src/pages directory
+    config.module.rules.unshift({
+      test: /\.(ts|tsx|js|jsx)$/,
+      include: [srcPagesPath],
+      use: {
+        loader: 'ignore-loader',
+      },
+    })
+    
+    // Add ignore-loader resolver
+    if (!config.resolveLoader) {
+      config.resolveLoader = {}
+    }
+    if (!config.resolveLoader.alias) {
+      config.resolveLoader.alias = {}
+    }
+    config.resolveLoader.alias['ignore-loader'] = path.resolve(__dirname, 'lib', 'null-loader.js')
     
     // Replace all imports from src with empty module
     config.plugins.push(

@@ -29,8 +29,27 @@ Open [http://localhost:3000](http://localhost:3000) to view the site.
 
 ### Build
 
+**Important:** If you encounter build errors related to the `src` directory (old Vite/React Router code), you have two options:
+
+**Option 1: Clean build (recommended)**
 ```bash
+# Delete .next cache
+rm -rf .next
+# Or on Windows PowerShell:
+Remove-Item -Recurse -Force .next
+
+# Then build
 npm run build
+```
+
+**Option 2: Temporarily rename src directory**
+```bash
+# Rename src to src-old (or any other name)
+mv src src-old
+# Build
+npm run build
+# Rename back if needed
+mv src-old src
 ```
 
 ### Start Production Server
