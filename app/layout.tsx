@@ -17,10 +17,10 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className="dark">
-      <body className={`${inter.className} antialiased`}>
+    <html lang="en" className="dark" style={{ backgroundColor: '#0A0A0A' }}>
+      <body className={`${inter.className} antialiased`} style={{ backgroundColor: '#0A0A0A', color: '#FFFFFF', margin: 0, padding: 0 }}>
         <Header />
-        <main className="min-h-screen pt-20">{children}</main>
+        <main className="min-h-screen pt-20" style={{ paddingTop: '80px' }}>{children}</main>
         <Footer />
       </body>
     </html>
