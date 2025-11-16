@@ -24,7 +24,7 @@ if (fs.existsSync(srcPath)) {
 
 try {
   console.log('🔨 Building Next.js app...')
-  execSync('next build', { stdio: 'inherit' })
+  execSync('npm run build:next', { stdio: 'inherit' })
   console.log('✅ Build successful!')
 } catch (error) {
   console.error('❌ Build failed:', error.message)
