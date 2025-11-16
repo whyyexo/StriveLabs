@@ -15,9 +15,7 @@ const config: Config = {
           secondary: "#0C0C0C",
         },
         foreground: "#FFFFFF",
-      },
-      borderColor: {
-        DEFAULT: "rgba(255, 255, 255, 0.1)",
+        border: "rgba(255, 255, 255, 0.1)",
       },
       fontFamily: {
         sans: [

@@ -7,7 +7,7 @@ import { fadeInUp, staggerContainer } from "@/lib/animations"
 
 export function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Blobs */}
       <GradientBlob className="top-20 left-10 w-96 h-96" color="purple" />
       <GradientBlob className="bottom-20 right-10 w-96 h-96" color="blue" />
