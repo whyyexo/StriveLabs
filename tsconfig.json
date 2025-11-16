@@ -32,5 +32,11 @@
     "content/**/*.ts",
     ".next/types/**/*.ts"
   ],
-  "exclude": ["node_modules", "src", "**/src/**"]
+  "exclude": [
+    "node_modules",
+    "src",
+    "**/src/**",
+    "src/**/*",
+    "**/*src*"
+  ]
 }
