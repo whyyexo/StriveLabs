@@ -28,20 +28,12 @@ export function Button({
   const baseClasses = "relative px-8 py-4 rounded-full font-medium text-base transition-all duration-300 flex items-center gap-2 group"
   
   const variantClasses = {
-    primary: "bg-gradient-to-r from-purple-500 via-blue-500 to-cyan-500 text-white shadow-lg shadow-purple-500/25 hover:shadow-xl hover:shadow-purple-500/40",
-    secondary: "glass border-white/20 text-white hover:bg-white/10 hover:border-white/30",
+    primary: "bg-white text-black hover:bg-gray-200 border border-black shadow-lg hover:shadow-xl transition-all",
+    secondary: "bg-black text-white border border-white hover:bg-white hover:text-black transition-all",
   }
 
   const content = (
     <>
-      {variant === "primary" && (
-        <motion.div
-          className="absolute inset-0 rounded-full bg-white/20"
-          initial={{ scale: 0, opacity: 0 }}
-          whileHover={{ scale: 1.1, opacity: 1 }}
-          transition={{ duration: 0.3 }}
-        />
-      )}
       <span className="relative z-10 flex items-center gap-2">
         {children}
         {icon || (variant === "primary" && <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />)}
