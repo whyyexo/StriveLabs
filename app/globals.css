@@ -4,10 +4,11 @@
 
 @layer base {
   * {
-    @apply border-border;
+    border-color: rgba(255, 255, 255, 0.1);
   }
   body {
-    @apply bg-background text-foreground;
+    background-color: #0A0A0A;
+    color: #FFFFFF;
     font-feature-settings: "rlig" 1, "calt" 1;
   }
 }
@@ -26,7 +27,9 @@
   }
   
   .gradient-border {
-    @apply border border-transparent bg-gradient-to-r from-purple-500/20 via-blue-500/20 to-cyan-500/20 bg-clip-border;
+    border: 1px solid transparent;
+    background-image: linear-gradient(to right, rgba(168, 85, 247, 0.2), rgba(59, 130, 246, 0.2), rgba(34, 211, 238, 0.2));
+    background-clip: padding-box;
   }
   
   .noise {

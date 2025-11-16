@@ -14,8 +14,10 @@ const config: Config = {
           DEFAULT: "#0A0A0A",
           secondary: "#0C0C0C",
         },
-        border: "rgba(255, 255, 255, 0.1)",
         foreground: "#FFFFFF",
+      },
+      borderColor: {
+        DEFAULT: "rgba(255, 255, 255, 0.1)",
       },
       fontFamily: {
         sans: [
