@@ -13,28 +13,33 @@ const nextConfig = {
   typescript: {
     ignoreBuildErrors: true,
   },
+  // Prevent Next.js from scanning src/pages directory
+  pageExtensions: ['tsx', 'ts', 'jsx', 'js'],
   webpack: (config, { isServer }) => {
     const srcPath = path.resolve(__dirname, 'src')
+    const srcPagesPath = path.resolve(__dirname, 'src', 'pages')
     
-    // Ignore ALL files in src directory completely
+    // Completely exclude src/pages from being processed
     config.plugins.push(
       new webpack.IgnorePlugin({
         checkResource(resource, context) {
           if (!context) return false
           
           const contextStr = String(context)
-          // If context is in src directory, ignore everything
+          
+          // Ignore if context is in src directory
           if (contextStr.includes(path.sep + 'src' + path.sep) || 
               contextStr.includes('/src/') ||
+              contextStr.includes('\\src\\') ||
               contextStr.endsWith(path.sep + 'src') ||
               contextStr.endsWith('/src')) {
             return true
           }
           
-          // Also check resolved path
+          // Check resolved path
           try {
             const resolvedPath = path.resolve(context)
-            if (resolvedPath.startsWith(srcPath)) {
+            if (resolvedPath.startsWith(srcPath) || resolvedPath.startsWith(srcPagesPath)) {
               return true
             }
           } catch (e) {
@@ -45,6 +50,17 @@ const nextConfig = {
         },
       })
     )
+    
+    // Also exclude src/pages from module rules
+    config.module = config.module || {}
+    config.module.rules = config.module.rules || []
+    
+    // Add rule to exclude src/pages completely
+    config.module.rules.push({
+      test: /\.(ts|tsx|js|jsx)$/,
+      include: [srcPagesPath],
+      use: 'null-loader',
+    })
     
     return config
   },

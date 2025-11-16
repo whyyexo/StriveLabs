@@ -29,28 +29,23 @@ Open [http://localhost:3000](http://localhost:3000) to view the site.
 
 ### Build
 
-**Important:** If you encounter build errors related to the `src` directory (old Vite/React Router code), you have two options:
+The build script automatically handles the `src` directory (old Vite/React Router code) by temporarily renaming it during the build process.
 
-**Option 1: Clean build (recommended)**
 ```bash
-# Delete .next cache
-rm -rf .next
-# Or on Windows PowerShell:
-Remove-Item -Recurse -Force .next
-
-# Then build
 npm run build
 ```
 
-**Option 2: Temporarily rename src directory**
+The script will:
+1. Temporarily rename `src` to `src-old`
+2. Build the Next.js app
+3. Restore `src` directory automatically
+
+**Note:** If you need to build without the script, you can use:
 ```bash
-# Rename src to src-old (or any other name)
-mv src src-old
-# Build
-npm run build
-# Rename back if needed
-mv src-old src
+npm run build:next
 ```
+
+But you'll need to manually rename `src` first to avoid build errors.
 
 ### Start Production Server
 
